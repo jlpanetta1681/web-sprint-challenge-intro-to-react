@@ -1,4 +1,4 @@
-// Write your Character component here
+import { findByDisplayValue } from "@testing-library/react";
 import React from "react";
 import styled from "styled-components";
 // Write your Character component here
@@ -25,6 +25,13 @@ const Cards = (props) => {
   );
 };
 
+
+
+
+
+
+
+
 const CardHolderDiv = styled.div`
   flex-direction: row;
   flex-wrap: wrap;
@@ -34,7 +41,7 @@ const CardHolderDiv = styled.div`
 `;
 
 const Card = styled.div`
-  background-color: #fff;
+  background-color: #eee;
   border: solid 1px gray;
   border-radius: 2%;
   width: 25%;
@@ -42,6 +49,12 @@ const Card = styled.div`
   padding: 2%;
   box-shadow: 5px 5px 20px gray;
   color: #555;
+  transition: all 0.2s ease-in-out;
+  &:hover {
+    transform: scale(1.1);
+    box-shadow: 10px 15px 30px gray;
+    background-color: #fff;
+  }
 `;
 const MugImg = styled.img`
   border: gray solid 3px;
@@ -52,5 +65,6 @@ const MugImg = styled.img`
 const ImgP = styled.p`
   color: red;
   font-size: 18px;
-`;
+`
+
 export default Cards;

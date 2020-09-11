@@ -1,10 +1,10 @@
-
+import React, {useState, useEffect} from 'react';
 import './App.css';
-import React, { useState, useEffect } from "react";
-import "./App.css";
-import axios from "axios";
-import Cards from "./components/Character";
-import styled from "styled-components"
+import axios from 'axios';
+import Cards from './components/Character';
+import styled from 'styled-components';
+
+
 const App = () => {
   // Try to think through what state you'll need for this app before starting. Then build out
   // the state properties here.
@@ -17,7 +17,7 @@ const App = () => {
 
   useEffect(() => {
     axios
-      .get("https://swapi.dev/")
+      .get("https://rickandmortyapi.com/api/character/")
 
       .then((response) => {
         setCharacterData(response.data.results);
@@ -37,4 +37,6 @@ const App = () => {
     </div>
   );
 }
+
+
 export default App;
