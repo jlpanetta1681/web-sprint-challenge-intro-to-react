@@ -30,7 +30,7 @@ const App = () => {
 
   return (
     <div className="App">
-      <h1 className="Header">Characters</h1>
+      <h1 className="Header">Lukes favorite dudes</h1>
       <div className="cardHolder">
         <Cards data={characterData} />
       </div>
